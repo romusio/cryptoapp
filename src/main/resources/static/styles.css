@@ -1,0 +1,342 @@
+/* src/main/resources/static/styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.5s ease;
+}
+
+body.dark-theme {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease, box-shadow 0.5s ease; /* Плавный переход для фона и тени */
+}
+
+body.dark-theme header {
+    background: rgba(52, 73, 94, 0.9); /* Темный фон для header в темной теме */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Более темная тень */
+}
+
+header h1 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 2.5em;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+body.dark-theme header h1 {
+    color: #ecf0f1;
+}
+
+header p, header a {
+    color: #7f8c8d;
+    text-decoration: none;
+}
+
+body.dark-theme header p, body.dark-theme header a {
+    color: #bdc3c7;
+}
+
+header a:hover {
+    color: #3498db;
+}
+
+body.dark-theme header a:hover {
+    color: #1abc9c;
+}
+
+#themeToggle {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+body.dark-theme #themeToggle {
+    background: #1abc9c;
+}
+
+#themeToggle:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+    animation: pulse 0.5s;
+}
+
+body.dark-theme #themeToggle:hover {
+    background: #16a085;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+body.dark-theme section {
+    background: #34495e;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+body.dark-theme h2 {
+    color: #ecf0f1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+body.dark-theme label {
+    color: #bdc3c7;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+body.dark-theme input, body.dark-theme textarea {
+    border-color: #7f8c8d;
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+body.dark-theme input:focus, body.dark-theme textarea:focus {
+    border-color: #1abc9c;
+}
+
+button[type="submit"] {
+    padding: 12px 25px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background: #2ecc71;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+body.dark-theme button[type="submit"] {
+    background: #1abc9c;
+}
+
+button[type="submit"]:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+    animation: pulse 0.5s;
+}
+
+body.dark-theme button[type="submit"]:hover {
+    background: #16a085;
+}
+
+.image-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #7f8c8d;
+    margin-top: auto;
+}
+
+body.dark-theme footer {
+    color: #bdc3c7;
+}
+
+/* Анимации из Animate.css */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+/* src/main/resources/static/styles.css */
+body.login-body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.login-container h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: border-bottom 0.3s, transform 0.3s;
+}
+
+.input-group input:focus {
+    border-bottom: 2px solid #4ecdc4;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #ddd;
+    pointer-events: none;
+    transition: 0.3s all;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -20px;
+    font-size: 0.9em;
+    color: #4ecdc4;
+}
+
+.login-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: #4ecdc4;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-btn:hover {
+    background: #45b7aa;
+    transform: scale(1.05);
+    animation: pulse 0.5s;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+.links a {
+    color: #4ecdc4;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Анимации */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+        margin: 20px;
+    }
+}

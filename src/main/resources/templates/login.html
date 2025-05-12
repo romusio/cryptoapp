@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+</html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход в CryptoApp</title>
+  <link rel="stylesheet" href="/cryptoapp/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="_csrf" th:content="${_csrf.token}"/>
+  <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body class="login-body">
+<div class="login-container animate__animated animate__fadeIn">
+  <h2>Вход в CryptoApp</h2>
+  <form id="loginForm" th:action="@{/login}" method="post" class="login-form">
+    <div class="input-group">
+      <input type="text" id="username" name="username" required>
+      <label for="username">Имя пользователя или Email</label>
+    </div>
+    <div class="input-group">
+      <input type="password" id="password" name="password" required>
+      <label for="password">Пароль</label>
+    </div>
+    <button type="submit" class="login-btn">Войти</button>
+    <div class="links">
+      <a href="#" th:href="@{/forgot-password}">Забыли пароль?</a>
+      <a href="#" th:href="@{/register}">Зарегистрироваться</a>
+    </div>
+  </form>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoApp</title>
+    <link rel="stylesheet" href="/cryptoapp/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body>
+<header>
+    <h1>Добро пожаловать в CryptoApp</h1>
+    <p>Создатель: Павлов Роман</p>
+    <a href="https://www.example.com" target="_blank">Посетите наш сайт</a>
+    <button id="themeToggle" class="animate__animated">Переключить тему</button>
+</header>
+
+<main>
+    <section id="message-form" class="animate__animated">
+        <h2>Отправить сообщение</h2>
+        <form id="sendMessageForm">
+            <label for="sender">Отправитель:</label>
+            <input type="text" id="sender" name="sender" required>
+
+            <label for="recipient">Получатель:</label>
+            <input type="text" id="recipient" name="recipient" required>
+
+            <label for="message">Сообщение:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="animate__animated">Отправить</button>
+        </form>
+    </section>
+
+    <section id="gallery" class="animate__animated">
+        <h2>Галерея изображений</h2>
+        <div class="image-container">
+            <img src="/cryptoapp/images/photo1.jpg" alt="Фото 1">
+            <img src="/cryptoapp/images/photo2.jpg" alt="Фото 2">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2025 CryptoApp. Все права защищены.</p>
+</footer>
+
+<script src="/cryptoapp/app.js"></script>
+</body>
+</html>
